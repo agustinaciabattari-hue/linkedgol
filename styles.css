@@ -1,1 +1,108 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+}
+
+.lg-nav {
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+}
+
+.lg-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.lg-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #1d4ed8;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lg-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.lg-btn-ingresar {
+  background: #1d4ed8;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.lg-hero {
+  position: relative;
+  min-height: 500px;
+  padding: 80px 24px;
+  text-align: center;
+  color: white;
+  background: #0f172a;
+}
+
+.lg-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&q=80') center/cover;
+  opacity: 0.35;
+}
+
+.lg-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,23,42,0.75);
+}
+
+.lg-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.lg-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 24px;
+}
+
+.lg-player-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.lg-player-img-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.lg-player-info {
+  padding: 16px;
+}
+
+.lg-footer {
+  padding: 32px;
+  text-align: center;
+  font-size: 13px;
+  background: #0f172a;
+  color: rgba(255,255,255,.7);
+}
