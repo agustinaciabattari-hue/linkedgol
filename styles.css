@@ -1,16 +1,22 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Inter', sans-serif;
   color: #0f172a;
+  background: #fff;
 }
 
+/* NAV */
 .lg-nav {
   height: 64px;
   padding: 0 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #e2e8f0;
   background: white;
 }
@@ -20,8 +26,8 @@ body {
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  color: #1d4ed8;
   text-decoration: none;
+  color: #1d4ed8;
 }
 
 .lg-logo-icon {
@@ -38,7 +44,13 @@ body {
 .lg-nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
+}
+
+.lg-nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
 }
 
 .lg-btn-ingresar {
@@ -46,47 +58,75 @@ body {
   color: white;
   padding: 8px 16px;
   border-radius: 8px;
-  text-decoration: none;
 }
 
+/* HERO */
 .lg-hero {
   position: relative;
-  min-height: 500px;
+  min-height: 600px;
   padding: 80px 24px;
   text-align: center;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #0f172a;
 }
 
 .lg-hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&q=80') center/cover;
+  background: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&q=80')
+    center/cover no-repeat;
   opacity: 0.35;
 }
 
 .lg-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15,23,42,0.75);
+  background: linear-gradient(
+    to bottom,
+    rgba(15,23,42,0.85),
+    rgba(15,23,42,0.95)
+  );
 }
 
 .lg-hero-content {
   position: relative;
   z-index: 2;
+  max-width: 800px;
+}
+
+.lg-hero h1 {
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 900;
+  color: white;
+}
+
+.lg-hero p {
+  color: rgba(255,255,255,0.75);
+  margin-top: 20px;
+}
+
+/* SECTIONS */
+.lg-section {
+  padding: 72px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .lg-grid-4 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  padding: 40px 24px;
+  margin-top: 32px;
 }
 
+/* PLAYER CARD */
 .lg-player-card {
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   overflow: hidden;
+  background: white;
 }
 
 .lg-player-img-wrap img {
@@ -97,12 +137,14 @@ body {
 
 .lg-player-info {
   padding: 16px;
+  font-size: 14px;
 }
 
+/* FOOTER */
 .lg-footer {
-  padding: 32px;
-  text-align: center;
-  font-size: 13px;
   background: #0f172a;
   color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: 32px;
+  font-size: 13px;
 }
